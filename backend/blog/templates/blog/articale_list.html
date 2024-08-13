@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+
+{%block main%}
+    {%for articale in object_list%}
+
+        <articale>
+            <h2>{{articale.title}}</h2>
+            <div>Author: {{articale.author}}</div>
+            <div>Publish Date: {{articale.publish}}</div>
+            <p>{{articale.content}}</p>
+        </article>
+
+    {%empty%}
+    {% endfor %}
+{%endblock%}
